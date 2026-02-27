@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abdi T — Cinematic Developer & Video Editor | Portfolio</title>
+  <meta name="description" content="Abdi T — Video Editor, Front-End Developer, Voice Over & Content Creator. Ultra-futuristic portfolio." />
+
+  <!-- CDN libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts for improved typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <!-- Three.js background scene -->
+  <canvas id="bg-canvas"></canvas>
+
+  <header>
+    <div class="brand">
+      <div class="logo">AT</div>
+      <div class="brand-text">
+        <h1>Abdi Tilahun</h1>
+        <div class="tagline muted">Code × Cinema × Creativity</div>
+      </div>
+    </div>
+
+    <nav>
+      <a class="nav-btn active" href="#" data-page="home">Home</a>
+      <a class="nav-btn" href="#" data-page="about">About</a>
+      <a class="nav-btn" href="#" data-page="portfolio">Portfolio</a>
+      <a class="nav-btn" href="#" data-page="contact">Contact</a>
+      <button class="theme-switcher" id="theme-switcher">
+        <i class="fas fa-palette"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Home Page Content -->
+  <main id="home-page" class="page-content active">
+    <div class="hero">
+      <div class="home-content-wrapper">
+        <div class="main-content">
+          <div class="hero-left">
+            <div class="eyebrow">
+              <div class="dot"></div>
+              <div>Cinematic Developer — Visual Storyteller</div>
+            </div>
+            <h2 class="title">Turning Code into <span class="gradient-text">Cinema</span></h2>
+            <p class="lead">I blend cutting-edge front-end development with cinematic video editing to create immersive digital experiences that captivate audiences and amplify brand messages.</p>
+
+            <div class="cta-row">
+              <a href="#contact-page" class="btn" id="hire-me-btn">
+                <i class="fas fa-bolt"></i> Start a Project
+              </a>
+              <a href="#portfolio" class="btn ghost" id="view-work-btn" data-page="portfolio">
+                <i class="fas fa-play-circle"></i> View Showreel
+              </a>
+            </div>
+
+            <div style="margin-top: 30px" class="muted">
+              <strong>Front-end Development</strong> · <strong>Video Editing</strong> · <strong>Motion Design</strong> · <strong>Voice Over</strong> · <strong>Content Creation</strong>
+            </div>
+          </div>
+
+          <div class="profile-media-section">
+            <!-- Small profile card -->
+            <div class="profile-card-small">
+              <div class="small-avatar" style="background-image:url('assets/images/profile.jpg')"></div>
+              <div class="profile-info">
+                <h3>Abdi Tilahun</h3>
+                <p>Cinematic Developer & Video Editor</p>
+                <p class="muted" style="margin-top: 10px; font-size: 13px;">Ethiopia · Available for Freelance</p>
+              </div>
+            </div>
+
+            <!-- Video and note container -->
+            <div class="video-note-container">
+              <!-- 9:16 Video -->
+              <div class="video-container-9-16">
+                <video controls poster="assets/images/profile.jpg">
+                  <source src="assets/videos/intro.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <!-- Note about the book -->
+              <div class="note-card">
+                <h4><i class="fas fa-gem"></i> My Latest Book</h4>
+                <p>A personal learning journey where I share my experiences, notes, and practical lessons while studying modern web development and video editing.</p>
+                <a href="https://www.notion.so/New-book-2c2a59b3715d80bd9131c320eccaf0ac?source=copy_link" target="_blank" class="note-btn">
+                  <i class="fas fa-external-link-alt"></i> Read on Notion
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <div class="avatar" id="avatar" style="background-image:url('assets/images/profile.jpg')"></div>
+            <div class="meta">
+              <div>
+                <div style="font-weight: 800; font-size: 22px;">Abdi Tilahun</div>
+                <div class="roles muted">Video Editor · Front-End Developer · Voice Over Artist</div>
+              </div>
+              <div>
+                <div style="font-size: 14px" class="muted">📍 Ethiopia</div>
+              </div>
+            </div>
+
+            <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+              <a class="nav-btn" href="https://www.youtube.com/@abdit_portfolio" target="_blank">
+                <i class="fab fa-youtube"></i> YouTube
+              </a>
+              <a class="nav-btn" href="https://t.me/yoliymepoh" target="_blank">
+                <i class="fab fa-telegram"></i> Telegram
+              </a>
+              <a class="nav-btn" href="https://github.com/abdit-teck" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- About Page Content -->
+  <section id="about-page" class="page-content">
+    <div class="portfolio-container">
+      <div class="portfolio-header">
+        <h1>About Me</h1>
+        <p class="lead">The intersection of technology and storytelling</p>
+      </div>
+
+      <div class="about-content">
+        <p>
+    I’m Abdi Tilahun, a Computer Science student focused on web development, cinematic video editing, and English voice-over. I enjoy building digital experiences that are simple, functional, and impactful.
+  </p>
+
+
+        <div class="cv-download">
+          <a href="cv.docx" class="cv-btn" download>
+            <i class="fas fa-download"></i> Download My CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Page Content -->
+  <section id="portfolio-page" class="page-content">
+    <div class="portfolio-container">
+      <div class="portfolio-header">
+        <h1>My Portfolio</h1>
+        <p class="lead">A curated selection of my best work across disciplines</p>
+      </div>
+
+      <!-- Front-End Development Portfolio -->
+      <div class="portfolio-category">
+        <h3><i class="fas fa-code"></i> Front-End Development</h3>
+        <p>Interactive web experiences and modern UI implementations:</p>
+        <div class="portfolio-links">
+          <a href="projects/simple-portfolio/index.html" target="_blank" class="portfolio-btn">
+            <i class="fas fa-external-link-alt"></i> View Front-End Projects
+          </a>
+        </div>
+      </div>
+
+      <!-- Video Editing Portfolio -->
+      <div class="portfolio-category">
+        <h3><i class="fas fa-film"></i> Video Editing</h3>
+        <p>Cinematic edits, YouTube content, and promotional videos:</p>
+        <div class="portfolio-links">
+          <a href="https://www.youtube.com/@abdit_portfolio" target="_blank" class="portfolio-btn">
+            <i class="fab fa-youtube"></i> YouTube Portfolio
+          </a>
+          <a href="https://t.me/+msthfs1buU41YjE0" target="_blank" class="telegram-btn">
+            <i class="fab fa-telegram"></i> Telegram Portfolio
+          </a>
+        </div>
+      </div>
+
+      <!-- Voice Over Portfolio -->
+      <div class="portfolio-category">
+        <h3><i class="fas fa-microphone-alt"></i> Voice Over</h3>
+        <p>Professional voice-over samples and narration work:</p>
+        <div class="portfolio-links">
+          <a href="https://www.youtube.com/@abdit_portfolio" target="_blank" class="portfolio-btn">
+            <i class="fab fa-youtube"></i> Voice Over Samples
+          </a>
+        </div>
+      </div>
+
+      <!-- Services Section -->
+      <div class="portfolio-category" style="margin-top: 80px;">
+        <h3><i class="fas fa-star"></i> My Services</h3>
+        <div class="grid">
+          <div class="skill">
+            <h4><i class="fas fa-video"></i> Video Editing</h4>
+            <p class="muted">Short form content, cinematic sequences, color grading, and motion graphics for maximum engagement.</p>
+          </div>
+          <div class="skill">
+            <h4><i class="fas fa-laptop-code"></i> Front-End Development</h4>
+            <p class="muted">Responsive, performant websites and web applications with modern UI/UX principles.</p>
+          </div>
+          <div class="skill">
+            <h4><i class="fas fa-microphone"></i> Voice Over</h4>
+            <p class="muted">English voice-over for YouTube and personal projects, focused on clear and natural narration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Page Content -->
+  <section id="contact-page" class="page-content">
+    <div class="portfolio-container">
+      <div class="portfolio-header">
+        <h1>Let's Create Together</h1>
+        <p class="lead">Ready to bring your vision to life? Let's start a conversation.</p>
+      </div>
+
+      <div style="display: flex; gap: 50px; flex-wrap: wrap; align-items: flex-start; justify-content: center;">
+        <!-- Formspree Contact Form -->
+        <form id="contact-form" action="https://formspree.io/f/myzroovg" method="POST">
+          <label>Your Name</label>
+          <input required name="name" placeholder="How should I address you?" />
+          
+          <label>Email Address</label>
+          <input required name="email" type="email" placeholder="Where can I reach you?" />
+          
+          <label>Your Message</label>
+          <textarea required name="message" rows="6" placeholder="Tell me about your project..."></textarea>
+          
+          <div class="form-status" id="form-status"></div>
+          
+          <div style="display: flex; gap: 15px; margin-top: 24px">
+            <button class="btn" type="submit">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <a class="btn ghost" href="mailto:yoliymepoh@gmail.com">
+              <i class="fas fa-envelope"></i> Email Directly
+            </a>
+          </div>
+        </form>
+
+        <div style="min-width: 280px; max-width: 450px; display: flex; flex-direction: column; gap: 30px;">
+          <div style="background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); padding: 28px; border-radius: 20px; border: 1px solid var(--glass-border);">
+            <h4 style="margin: 0 0 16px; font-size: 22px;">Direct Contact</h4>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 12px; font-size: 16px">
+              <a href="https://wa.me/251935031845" target="_blank" style="display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 12px; background: rgba(255,255,255,0.03);">
+                <i class="fab fa-whatsapp" style="color: #25d366;"></i> WhatsApp
+              </a>
+              <a href="https://t.me/yoliymepoh" target="_blank" style="display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 12px; background: rgba(255,255,255,0.03);">
+                <i class="fab fa-telegram" style="color: #0088cc;"></i> Telegram
+              </a>
+              <a href="https://www.youtube.com/@AbdiT_Official" target="_blank" style="display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 12px; background: rgba(255,255,255,0.03);">
+                <i class="fab fa-youtube" style="color: #ff0000;"></i> YouTube
+              </a>
+            </div>
+          </div>
+
+          <div style="background: linear-gradient(135deg, rgba(0,238,255,0.1), rgba(0,238,255,0.05)); padding: 28px; border-radius: 20px; border: 1px solid rgba(0, 238, 255, 0.2);">
+            <h4 style="margin: 0 0 16px; font-size: 22px;">Quick Response</h4>
+            <p style="font-size: 16px; margin-bottom: 20px; line-height: 1.6;">I typically respond within 24 hours. For urgent inquiries, WhatsApp or Telegram will get the fastest response.</p>
+            <a href="https://wa.me/251935031845" target="_blank" class="btn" style="width: 100%; justify-content: center;">
+              <i class="fab fa-whatsapp"></i> Message on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="socials-section">
+        <h3 style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Connect With Me</h3>
+        <p style="text-align: center; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 18px; line-height: 1.7;">
+          I'm active across multiple platforms. Whether you want to see my latest work, discuss a project, or just connect, feel free to reach out through any of these channels.
+        </p>
+        
+        <div class="socials-container">
+          <a href="https://t.me/yoliymepoh" target="_blank" class="social-link">
+            <div class="social-icon"><i class="fab fa-telegram" style="color: #0088cc;"></i></div>
+            <div class="social-text">Telegram</div>
+          </a>
+          
+          <a href="mailto:yoliymepoh@gmail.com" class="social-link">
+            <div class="social-icon"><i class="fas fa-envelope" style="color: #ea4335;"></i></div>
+            <div class="social-text">Email</div>
+          </a>
+          
+          <a href="https://www.tiktok.com/@abdi_ti" target="_blank" class="social-link">
+            <div class="social-icon"><i class="fab fa-tiktok" style="color: #000000;"></i></div>
+            <div class="social-text">TikTok</div>
+          </a>
+          
+          <a href="https://www.youtube.com/@AbdiT_Official" target="_blank" class="social-link">
+            <div class="social-icon"><i class="fab fa-youtube" style="color: #ff0000;"></i></div>
+            <div class="social-text">YouTube</div>
+          </a>
+          
+          <a href="https://www.facebook.com/profile.php?id=61578100942576" target="_blank" class="social-link">
+            <div class="social-icon"><i class="fab fa-facebook" style="color: #1877f2;"></i></div>
+            <div class="social-text">Facebook</div>
+          </a>
+          
+          <a href="https://www.instagram.com/abdit.official" target="_blank" class="social-link">
+            <div class="social-icon"><i class="fab fa-instagram" style="color: #e4405f;"></i></div>
+            <div class="social-text">Instagram</div>
+          </a>
+          
+          <a href="https://www.linkedin.com/in/abdi-t-725a4832a" target="_blank" class="social-link">
+            <div class="social-icon"><i class="fab fa-linkedin" style="color: #0a66c2;"></i></div>
+            <div class="social-text">LinkedIn</div>
+          </a>
+          
+          <a href="https://x.com/yoliymepoh" target="_blank" class="social-link">
+            <div class="social-icon"><i class="fab fa-twitter" style="color: #000000;"></i></div>
+            <div class="social-text">Twitter/X</div>
+          </a>
+          
+          <a href="https://www.upwork.com/freelancers/~516f797a05a3d462" target="_blank" class="social-link">
+            <div class="social-icon"><i class="fab fa-upwork" style="color: #6fda44;"></i></div>
+            <div class="social-text">Upwork</div>
+          </a>
+          
+          <a href="https://www.fiverr.com/abdi_tilehun" target="_blank" class="social-link">
+            <div class="social-icon"><i class="fas fa-search-dollar" style="color: #1dbf73;"></i></div>
+            <div class="social-text">Fiverr</div>
+          </a>
+          
+          <a href="https://github.com/abdit-teck" target="_blank" class="social-link">
+            <div class="social-icon"><i class="fab fa-github" style="color: #ffffff;"></i></div>
+            <div class="social-text">GitHub</div>
+          </a>
+          
+          <a href="https://wa.me/251935031845" target="_blank" class="social-link">
+            <div class="social-icon"><i class="fab fa-whatsapp" style="color: #25d366;"></i></div>
+            <div class="social-text">WhatsApp</div>
+          </a>
+          
+          <a href="https://www.notion.so/New-book-2c2a59b3715d80bd9131c320eccaf0ac?source=copy_link" target="_blank" class="social-link">
+            <div class="social-icon"><i class="fas fa-book" style="color: #ffffff;"></i></div>
+            <div class="social-text">Notion (My Book)</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>© <span id="year"></span> Abdi Tilahun — Turning Code into Cinema</div>
+    <div class="muted">Crafted with HTML · CSS · JS · GSAP · Three.js</div>
+  </footer>
+<script src="js/script.js"></script> 
+</body>
+</html>

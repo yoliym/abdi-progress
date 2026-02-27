@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abdi Tilahun — Computer Science Student</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <meta name="description" content="Abdi Tilahun — Third-year Computer Science student at Mattu University. Skills: Video editing, Front-end web development." />
+</head>
+<body>
+  <div id="app">
+
+    <!-- Left Fixed Profile Column -->
+    <aside class="left-col" id="leftCol">
+      <div class="profile-stick">
+
+        <div class="profile-photo-outer" tabindex="0">
+          <img src="assets/images/profile.jpg" 
+               alt="Abdi Tilahun profile photo" 
+               class="profile-photo" 
+               id="profilePhoto" />
+        </div>
+
+        <h1 class="name">Abdi Tilahun</h1>
+        <p class="role">3rd year Computer Science — Mattu University</p>
+
+        <nav class="socials">
+          <a href="https://t.me/yoliymepoh" target="_blank" class="social">
+            Telegram<br><small>@yoliymepoh</small>
+          </a>
+
+          <a href="mailto:yoliymepoh@gmail.com" class="social">
+            Email<br><small>yoliymepoh@gmail.com</small>
+          </a>
+
+          <a href="https://www.tiktok.com/@abdi_ti" target="_blank" class="social">
+            TikTok<br><small>@abdi_ti</small>
+          </a>
+        </nav>
+
+        <button id="contactBtn" class="contact-cta">
+          Contact
+        </button>
+
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-col">
+
+      <header class="hero">
+
+        <div class="hero-content">
+          <h2 class="headline">
+            Hi — I'm <span>Abdi</span>.
+          </h2>
+
+          <p class="sub">
+            Third-year Computer Science student.
+            I specialize in <strong>video editing</strong>
+            and <strong>front-end development</strong>.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn primary" id="hireBtn">
+              Get in touch
+            </button>
+            <button class="btn ghost" id="downloadVcard">
+              Download vCard
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="assets/images/hero.jpg"
+               alt="Abdi Tilahun"
+               class="hero-photo">
+        </div>
+
+      </header>
+
+      <section class="info-cards">
+
+        <article class="card">
+          <h3>Skills</h3>
+          <ul>
+            <li>Video Editing</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Responsive UI</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Education</h3>
+          <p>
+            Third-year Computer Science student at
+            <strong>Mattu University, Ethiopia</strong>.
+          </p>
+        </article>
+
+      </section>
+
+      <footer class="site-footer">
+        <p>© <span id="year"></span> Abdi Tilahun</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div id="contactModal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" id="closeModal">✕</button>
+
+      <h4>Contact</h4>
+
+      <p>Email: yoliymepoh@gmail.com</p>
+      <p>Telegram: @yoliymepoh</p>
+
+      <button id="copyEmail" class="btn">
+        Copy Email
+      </button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
